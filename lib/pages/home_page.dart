@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:stepzone/components/bottom_nav_bar.dart';
 import 'package:stepzone/pages/cart_page.dart';
+import 'package:stepzone/pages/intro_page.dart';
 import 'package:stepzone/pages/shop_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -127,9 +128,16 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white,
                 ),
                 title: Text(
-                  'Logout',
+                  'Exit',
                   style: TextStyle(color: Colors.white),
                 ),
+                onTap: () {
+                  // Navigasi ke IntroPage
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => IntroPage()),
+                  );
+                },
               ),
             ),
           ],
